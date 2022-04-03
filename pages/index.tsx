@@ -6,7 +6,7 @@ import ErrorMessage from "../components/ErrorMessage";
 import SuccessMessage from "../components/SuccessMessage";
 
 const title = `Welcome to Shorty`;
-const desc = `Personal URL Shortener that generate short links and store them to your Notion Database`;
+const desc = `Personal URL Shortener that generate short links and track them.`;
 
 const Home: NextPage = () => {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
