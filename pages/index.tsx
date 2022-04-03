@@ -12,6 +12,8 @@ const Home: NextPage = () => {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
   const [inputEl, setInputEl] = useState("");
 
+  const hashUrl = () => Math.random().toString(20).substr(2, 6);
+
   const checkUrl = (url: string) => {
     const pattern =
       /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
@@ -26,7 +28,7 @@ const Home: NextPage = () => {
 
     setForm({
       state: Form.Success,
-      message: `Yay!`,
+      message: `Yay, ${hashUrl()}`,
     });
   };
 
