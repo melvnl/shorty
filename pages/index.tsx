@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
     setForm({
       state: Form.Success,
-      message: `Yay, ${hashUrl()}`,
+      message: `localhost:3000/${hashUrl()}`,
     });
   };
 
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
           className=" my-3 p-4 w-full rounded-md border-2 focus:border-green-400 outline-none"
         />
         <div
-          className="p-4 bg-green-700 rounded-md text-white text-center cursor-pointer active:bg-green-600"
+          className="p-4 mb-2 bg-green-700 rounded-md text-white text-center cursor-pointer active:bg-green-600"
           onClick={() => checkUrl(inputEl)}
         >
           Generate
