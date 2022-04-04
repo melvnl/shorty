@@ -7,6 +7,8 @@ import SuccessMessage from "../components/SuccessMessage";
 
 const title = `Welcome to Shorty`;
 const desc = `Personal URL Shortener that generate short links and track them.`;
+const baseUrl = `localhost:3000`;
+const errorUrl = `Not a valid URL`;
 
 const Home: NextPage = () => {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
@@ -21,14 +23,14 @@ const Home: NextPage = () => {
     if (!pattern.test(url)) {
       setForm({
         state: Form.Error,
-        message: `Not a valid URL`,
+        message: `${errorUrl}`,
       });
       return;
     }
 
     setForm({
       state: Form.Success,
-      message: `localhost:3000/${hashUrl()}`,
+      message: `${baseUrl}/${hashUrl()}`,
     });
   };
 
